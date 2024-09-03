@@ -8,4 +8,4 @@ you can visit the website by going to https://davidcoles.uk
 
 ## Contact
 
-You can contact me on me@davidcoles.uk, I am currently available for work.
+You can contact me at me@davidcoles.uk, I am currently available for work.
