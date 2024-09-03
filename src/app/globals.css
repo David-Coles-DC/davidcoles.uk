@@ -20,6 +20,12 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.david-container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
