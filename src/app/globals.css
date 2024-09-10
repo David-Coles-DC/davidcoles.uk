@@ -16,14 +16,23 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  background: rgb(222,222,222);
+  background: linear-gradient(180deg, rgba(222,222,222,1) 0%, rgba(255,255,255,1) 100%);
+  min-height: 100vh;
+  padding: 190px 40px 100px;
+  scroll-padding-top: 90px;
 }
 
 .david-container {
   border-radius: 50%;
   overflow: hidden;
-  width: 100px;
+  width: 50px;
 }
 
 @layer utilities {

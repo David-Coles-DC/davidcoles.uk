@@ -1,12 +1,21 @@
-import Image from "next/image";
+"use client";
+
+import { useRef } from "react";
+
+import Header from "@/components/Header"
 
 export default function Home() {
-  return (
-    <main>
-        <div className={'david-container'}>
-            <Image alt={'David Coles'} height={100} src={'/images/david-coles.jpg'} width={100}></Image>
-        </div>
-        <div className="font-extralight text-9xl">David Coles</div>
-    </main>
-  );
+    const homeSection = useRef<HTMLElement | null>(null);
+    const aboutSection = useRef<HTMLElement | null>(null);
+    const projectsSection = useRef<HTMLElement | null>(null);
+    const contactSection = useRef<HTMLElement | null>(null);
+    return (
+        <main className={'scroll-pt-[90px] size-full'}>
+            <Header homeSection={homeSection} aboutSection={aboutSection} projectsSection={projectsSection} contactSection={contactSection} />
+            <section ref={homeSection}>HOME</section>
+            <section ref={aboutSection}>ABOUT</section>
+            <section ref={projectsSection}>PROJECTS</section>
+            <section ref={contactSection}>CONTACT</section>
+        </main>
+    );
 }
