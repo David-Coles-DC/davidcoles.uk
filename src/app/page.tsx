@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 
-import Header from "@/components/Header"
+import ContactForm from "@/components/ContactForm";
+import Header from "@/components/Header";
 
 export default function Home() {
     const homeSection = useRef<HTMLElement | null>(null);
@@ -12,10 +13,21 @@ export default function Home() {
     return (
         <main className={'scroll-pt-[90px] size-full'}>
             <Header homeSection={homeSection} aboutSection={aboutSection} projectsSection={projectsSection} contactSection={contactSection} />
-            <section ref={homeSection}>HOME</section>
-            <section ref={aboutSection}>ABOUT</section>
-            <section ref={projectsSection}>PROJECTS</section>
-            <section ref={contactSection}>CONTACT</section>
+            <section className={'flex items-center justify-center text-center'} ref={homeSection}>
+                <div>
+                    <h1>David Coles</h1>
+                    <h2>Developer</h2>
+                    <h2>Artist</h2>
+                    <h2>Maker</h2>
+                </div>
+            </section>
+            <section className={'flex items-center justify-center'} ref={aboutSection}>ABOUT</section>
+            <section className={'flex items-center justify-center'} ref={projectsSection}>PROJECTS</section>
+            <section className={'flex items-center justify-center'} ref={contactSection}>
+                <div>
+                    <ContactForm />
+                </div>
+            </section>
         </main>
     );
 }
